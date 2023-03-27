@@ -8,7 +8,7 @@ public class SmallInteger {
     private int val;
 
     /**
-     *
+     *----
      * @param val
      */
     public SmallInteger(int val){
