@@ -8,14 +8,13 @@ public class Main {
 
 
 
-
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
 
         int xInt, yInt, t = 0, x = 0, y =0;
         SmallInteger xSmall, ySmall;
-        System.out.println("Select an action: \n\"+\" - summation \n\"-\" - subtraction \n\"/\" - division");
+        //System.out.println("Select an action: \n\"+\" - summation \n\"-\" - subtraction \n\"/\" - division");
       int check = 0;
         while(check != 1){
 
