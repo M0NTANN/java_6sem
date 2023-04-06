@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.BitSet;
 import java.util.Scanner;
 
@@ -9,6 +10,13 @@ public class Main {
 
 
     public static void main(String[] args) {
+        UserView userView = new UserView();
+        SwingUtilities.invokeLater(()->{
+            userView.init();
+        });
+
+
+
         Scanner scan = new Scanner(System.in);
 
 
