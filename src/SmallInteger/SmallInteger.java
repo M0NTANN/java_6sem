@@ -1,11 +1,13 @@
 package SmallInteger;
 
-import static java.util.stream.IntStream.*;
+
+import Controller.*;
+import View.*;
 
 public class SmallInteger {
 
 
-    private int val;
+    public static int val;
 
     /**
      *----
@@ -40,7 +42,7 @@ public class SmallInteger {
      * @param x introduced number
      * @return number after check
      */
-    public static SmallInteger check(SmallInteger x){
+    /*public static SmallInteger check(SmallInteger x){
 
         if(x.val > 10000){
             int schet_povt;
@@ -71,25 +73,9 @@ public class SmallInteger {
             }
         }
         return x;
-    }
+    }*/
 
-    /**
-     * Method with loop for overflow for positive numbers
-     * @param x introduced number
-     * @param schet_povt how many times the number is greater than the limit
-     */
-    private static void sub_cycle_2(SmallInteger x, int schet_povt) {
-        range(1, schet_povt).forEach(i -> x.val = x.val - 10000);
-    }
 
-    /**
-     * Method with loop for overflow for negative numbers
-     * @param x introduced number
-     * @param schet_povt how many times the number is greater than the limit
-     */
-    private static void sub_cycle(SmallInteger x, int schet_povt) {
-        range(0, schet_povt).forEachOrdered(i -> x.val = x.val - 10000);
-    }
 
 
     /**
@@ -99,13 +85,15 @@ public class SmallInteger {
      * @return number after summation
      */
     public static SmallInteger Sum(SmallInteger x, SmallInteger y){
-
-        x = check(x);
-        y = check(y);
+        int xint = Controller.check(Integer.parseInt(String.valueOf(x.getVal())));
+        x = new SmallInteger(xint);
+        int yint = Controller.check(Integer.parseInt(String.valueOf(y.getVal())));
+        y = new SmallInteger(yint);
         int s;
         s = x.val + y.val;
         SmallInteger sv = new SmallInteger(s);
-        sv = check(sv);
+        int sint = Controller.check(Integer.parseInt(String.valueOf(sv.getVal())));
+        sv = new SmallInteger(sint);;
         return sv;
     }
 
@@ -116,12 +104,15 @@ public class SmallInteger {
      * @return number after subtraction
      */
     public static SmallInteger sub(SmallInteger x, SmallInteger y){
+        int xint = Controller.check(Integer.parseInt(String.valueOf(x.getVal())));
+        x = new SmallInteger(xint);
+        int yint = Controller.check(Integer.parseInt(String.valueOf(y.getVal())));
+        y = new SmallInteger(yint);
         int s;
-        x = check(x);
-        y = check(y);
         s = x.val - y.val;
         SmallInteger sv = new SmallInteger(s);
-        sv = check(sv);
+        int sint = Controller.check(Integer.parseInt(String.valueOf(sv.getVal())));
+        sv = new SmallInteger(sint);;
         return sv;
     }
 
@@ -133,12 +124,15 @@ public class SmallInteger {
      * @return number after division
      */
     public static SmallInteger div(SmallInteger x, SmallInteger y){
+        int xint = Controller.check(Integer.parseInt(String.valueOf(x.getVal())));
+        x = new SmallInteger(xint);
+        int yint = Controller.check(Integer.parseInt(String.valueOf(y.getVal())));
+        y = new SmallInteger(yint);
         int s;
-        x = check(x);
-        y = check(y);
         s = x.val / y.val;
         SmallInteger sv = new SmallInteger(s);
-        sv = check(sv);
+        int sint = Controller.check(Integer.parseInt(String.valueOf(sv.getVal())));
+        sv = new SmallInteger(sint);;
         return sv;
     }
 
@@ -149,11 +143,15 @@ public class SmallInteger {
      * @return number after Multiplicatio
      */
     public static SmallInteger mod(SmallInteger x, SmallInteger y){
+        int xint = Controller.check(Integer.parseInt(String.valueOf(x.getVal())));
+        x = new SmallInteger(xint);
+        int yint = Controller.check(Integer.parseInt(String.valueOf(y.getVal())));
+        y = new SmallInteger(yint);
         int s;
-        x = check(x);
-        y = check(y);
         s = x.val % y.val;
         SmallInteger sv = new SmallInteger(s);
+        int sint = Controller.check(Integer.parseInt(String.valueOf(sv.getVal())));
+        sv = new SmallInteger(sint);;
         return sv;
     }
 

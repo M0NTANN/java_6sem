@@ -1,9 +1,7 @@
 package View;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
-import java.security.MessageDigest;
 
 import SmallInteger.*;
 
@@ -15,6 +13,9 @@ public class UserView extends JFrame{
     private JLabel y;
     private JLabel result_result;
     private JButton sum;
+    private JButton sub;
+    private JButton div;
+    private JButton mod;
     private JTextArea number1;
     private JTextArea number2;
 
@@ -47,9 +48,12 @@ public class UserView extends JFrame{
 
 
 
-        JPanel buttons = new JPanel();
+        JPanel buttons = new JPanel(new FlowLayout());
         //buttons.add(enterNumber, BorderLayout.NORTH);
         buttons.add(sum = new JButton("+"));
+        buttons.add(sub = new JButton("-"));
+        buttons.add(div = new JButton("/"));
+        buttons.add(mod = new JButton("mod"));
 
         JPanel mainPanel = new JPanel(new GridLayout(3,3));
         mainPanel.add(inf_ent);
@@ -77,6 +81,78 @@ public class UserView extends JFrame{
                 ySmall = new SmallInteger(num1);
                 xSmall = new SmallInteger(num2);
                 result_result.setText(String.valueOf(SmallInteger.Sum(xSmall,ySmall).getVal()));
+
+
+            //System.out.println(SmallInteger.SmallInteger.Sum(ySmall,ySmall).getVal());
+        });
+
+        sub.addActionListener(e -> {
+
+            int num1 = 0, num2 = 0;
+            SmallInteger xSmall, ySmall;
+            String textnum2 = this.number2.getText();
+            String textnum1 = this.number1.getText();
+            try {
+                num2 = Integer.parseInt(textnum2);
+            }catch (NumberFormatException ex){
+                JOptionPane.showMessageDialog(frame,"Invalid input \"x\" is not a number");
+            }
+            try {
+                num1 = Integer.parseInt(textnum1);
+            }catch (NumberFormatException ex){
+                JOptionPane.showMessageDialog(frame,"Invalid input \"y\" is not a number");
+            }
+            ySmall = new SmallInteger(num1);
+            xSmall = new SmallInteger(num2);
+            result_result.setText(String.valueOf(SmallInteger.sub(xSmall,ySmall).getVal()));
+
+
+            //System.out.println(SmallInteger.SmallInteger.Sum(ySmall,ySmall).getVal());
+        });
+
+        div.addActionListener(e -> {
+
+            int num1 = 0, num2 = 0;
+            SmallInteger xSmall, ySmall;
+            String textnum2 = this.number2.getText();
+            String textnum1 = this.number1.getText();
+            try {
+                num2 = Integer.parseInt(textnum2);
+            }catch (NumberFormatException ex){
+                JOptionPane.showMessageDialog(frame,"Invalid input \"x\" is not a number");
+            }
+            try {
+                num1 = Integer.parseInt(textnum1);
+            }catch (NumberFormatException ex){
+                JOptionPane.showMessageDialog(frame,"Invalid input \"y\" is not a number");
+            }
+            ySmall = new SmallInteger(num1);
+            xSmall = new SmallInteger(num2);
+            result_result.setText(String.valueOf(SmallInteger.div(xSmall,ySmall).getVal()));
+
+
+            //System.out.println(SmallInteger.SmallInteger.Sum(ySmall,ySmall).getVal());
+        });
+
+        mod.addActionListener(e -> {
+
+            int num1 = 0, num2 = 0;
+            SmallInteger xSmall, ySmall;
+            String textnum2 = this.number2.getText();
+            String textnum1 = this.number1.getText();
+            try {
+                num2 = Integer.parseInt(textnum2);
+            }catch (NumberFormatException ex){
+                JOptionPane.showMessageDialog(frame,"Invalid input \"x\" is not a number");
+            }
+            try {
+                num1 = Integer.parseInt(textnum1);
+            }catch (NumberFormatException ex){
+                JOptionPane.showMessageDialog(frame,"Invalid input \"y\" is not a number");
+            }
+            ySmall = new SmallInteger(num1);
+            xSmall = new SmallInteger(num2);
+            result_result.setText(String.valueOf(SmallInteger.mod(xSmall,ySmall).getVal()));
 
 
             //System.out.println(SmallInteger.SmallInteger.Sum(ySmall,ySmall).getVal());

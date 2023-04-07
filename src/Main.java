@@ -1,10 +1,9 @@
-import SmallInteger.SmallInteger;
+//import SmallInteger.SmallInteger;
 import View.UserView;
-
 import javax.swing.*;
-import java.util.Scanner;
+//import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
+//import static java.lang.Integer.parseInt;
 
 
 public class Main {
