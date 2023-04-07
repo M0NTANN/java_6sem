@@ -1,5 +1,7 @@
+import SmallInteger.SmallInteger;
+import View.UserView;
+
 import javax.swing.*;
-import java.util.BitSet;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
@@ -16,7 +18,7 @@ public class Main {
         });
 
 
-
+       /* {
         Scanner scan = new Scanner(System.in);
 
 
@@ -120,7 +122,7 @@ public class Main {
                         break;
                     }
                     if (t == 1){
-                        // System.out.println("Result: "+ SmallInteger.del((float)x, (float)y));
+                        // System.out.println("Result: "+ SmallInteger.SmallInteger.del((float)x, (float)y));
                         System.out.println("Result: "+ SmallInteger.mod(xSmall, ySmall).getVal());}
                     else if(t == 0) System.out.println("Result: "+ SmallInteger.div(xSmall, ySmall).getVal());
                     break;
@@ -137,6 +139,6 @@ public class Main {
                      System.out.println("Read one more time:\n");
          }
 
-        }
+        }}*/
     }
 }

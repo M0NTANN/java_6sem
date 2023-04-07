@@ -1,4 +1,4 @@
-import java.util.stream.IntStream;
+package SmallInteger;
 
 import static java.util.stream.IntStream.*;
 
