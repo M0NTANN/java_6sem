@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="exampleProject" default="compile">
+    <target name="makeJAR" depends="compile, init">
+        <jar destfile="package-${DSTAMP}.jar" basedir="D:\study\RPS\java_6sem">
+            <manifest>
+                <attribute name="Main-class" value="main"/>
+            </manifest>
+        </jar>
+    </target>
+    <target name="compile" depends="init">
+        <javac srcdir="D:\study\RPS\java_6sem" destdir="D:\study\RPS\java_6sem" debug="true" includes="Main.java"/>
+    </target>
+    <target name="init">
+        <mkdir dir="D:\study\RPS\java_6sem"/>
+        <tstamp/>
+    </target>
+    <target name="finalize" depends="makeJAR">
+
+    </target>
+</project>
