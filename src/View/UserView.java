@@ -58,16 +58,16 @@ public class UserView extends JFrame{
         JPanel mainPanel = new JPanel(new GridLayout(3,3));
         mainPanel.add(inf_ent);
         mainPanel.add(buttons);
-       // mainPanel.add(entry);
+        // mainPanel.add(entry);
 
         setContentPane(mainPanel);
 
         sum.addActionListener(e -> {
 
-                int num1 = 0, num2 = 0;
-                SmallInteger xSmall, ySmall;
-                String textnum2 = this.number2.getText();
-                String textnum1 = this.number1.getText();
+            int num1 = 0, num2 = 0;
+            SmallInteger xSmall, ySmall;
+            String textnum2 = this.number2.getText();
+            String textnum1 = this.number1.getText();
             try {
                 num2 = Integer.parseInt(textnum2);
             }catch (NumberFormatException ex){
@@ -76,11 +76,11 @@ public class UserView extends JFrame{
             try {
                 num1 = Integer.parseInt(textnum1);
             }catch (NumberFormatException ex){
-            JOptionPane.showMessageDialog(frame,"Invalid input \"y\" is not a number");
-        }
-                ySmall = new SmallInteger(num1);
-                xSmall = new SmallInteger(num2);
-                result_result.setText(String.valueOf(SmallInteger.Sum(xSmall,ySmall).getVal()));
+                JOptionPane.showMessageDialog(frame,"Invalid input \"y\" is not a number");
+            }
+            ySmall = new SmallInteger(num1);
+            xSmall = new SmallInteger(num2);
+            result_result.setText(String.valueOf(SmallInteger.Sum(xSmall,ySmall).getVal()));
 
 
             //System.out.println(SmallInteger.SmallInteger.Sum(ySmall,ySmall).getVal());
